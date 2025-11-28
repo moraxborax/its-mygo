@@ -9,11 +9,11 @@ import (
 func main() {
 	log.SetPrefix("greetings: ")
 	log.SetFlags(0)
-
-	message, err := greetings.Hello("Tomori")
+	names := []string{"tomori", "penguin", "gugugaga"}
+	messages, err := greetings.Hellos(names)
 	if err != nil {
 		log.Fatal(err)
 	}
 	//message := greetings.Hello("Gladys")
-	fmt.Println(message)
+	fmt.Println(messages)
 }
